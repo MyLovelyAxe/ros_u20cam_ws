@@ -24,7 +24,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'camera_node = u20cam_720p.live_stream_camera:main',
+            'raw_img_pub = u20cam_720p.raw_image_publisher:main',
+            'comp_img_pub = u20cam_720p.compressed_image_publisher:main',
         ],
     },
 )

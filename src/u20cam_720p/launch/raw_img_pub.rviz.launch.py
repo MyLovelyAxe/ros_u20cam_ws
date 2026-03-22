@@ -19,13 +19,13 @@ def generate_launch_description():
         arguments=["-d", rviz_config_file],
     )
 
-    camera_node = Node(
+    raw_img_pub_node = Node(
         package='u20cam_720p',
-        executable='camera_node',
-        name='camera_node',
+        executable='raw_img_pub',
+        name='raw_img_pub',
     )
     
     return LaunchDescription([
         rviz_node,
-        camera_node,
+        raw_img_pub_node,
     ])
